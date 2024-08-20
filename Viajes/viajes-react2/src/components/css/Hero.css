@@ -1,0 +1,40 @@
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.clave.com.ec/wp-content/uploads/2018/10/DSC_0299.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    padding: 20px;
+}
+
+.overlay h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #ff7e5f;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+}

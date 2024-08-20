@@ -1,0 +1,79 @@
+
+.servicios {
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.servicios h2 {
+    font-size: 2.5rem;
+    color: #ff7e5f;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 250px;
+    margin: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 126, 95, 0.3), rgba(255, 180, 123, 0.3));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-box:hover::before {
+    opacity: 1;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+.service-icon {
+    width: 60px; /* Ajusta el tamaño del ícono */
+    height: 60px; /* Mantén la proporción si es una imagen cuadrada */
+    object-fit: contain; /* Mantén la proporción original de la imagen */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.service-box:hover .service-icon {
+    transform: scale(1.1); /* Agranda la imagen al pasar el mouse */
+    filter: brightness(1.2); /* Aumenta el brillo al pasar el mouse */
+}
+
+
+.service-box h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #666;
+}
+

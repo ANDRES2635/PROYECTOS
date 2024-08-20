@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" type="css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <i class="devicon-devicon-plain"></i>
+        <div class="logo">Developer</div>
+        <nav>
+            <ul>
+                <li><a href="#home">home </a></li>
+                <li><a href="#projects">Projects </a></li>
+                <li><a href="#about">About </a></li>
+                <li><a href="#about">Contact </a></li>
+                <li><button id="theme-toggle" class="btn"> Theme </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Hello, I´m Jeampierre</h1>
+            <h2>a Web Developer </h2>
+            <a href="#projects" class="btn">Projects</a>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>PROJECTS</h2>
+        <div class="project-grid">
+            <div class="project-card" data-url="https://example.com/project1">
+                <img src="upload/logo1.png" alt="Project 1">
+                <div class="card-content">
+                    <h3>SANTO BOCADO</h3>
+                    <p>We are a project focused on providing food and beverage services for all types of events, giving
+                        options and solutions to your immediate needs. We have been in the market for 6 years.
+                        Below we present the portfolio of products and services we offer.</p>
+                </div>
+            </div>
+            <div class="project-card" onclick="openModal('project2')">
+                <img src="upload/flag.png" alt="Project 2">
+                <div class="card-content">
+                    <h3>EXPLORE ECUADOR</h3>
+                    <p>"Explore Ecuador" is a project designed to provide an engaging and detailed overview of travel
+                        destinations in Ecuador. The website offers visual and descriptive information about various
+                        locations, aiming to captivate potential travellers and assist in their trip planning. Featuring
+                        modern web technologies, the site includes an interactive and functional design with features
+                        such as modals for additional information and intuitive navigation. The project showcases my
+                        ability to create effective web solutions with a focus on user experience and clear presentation
+                        of data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About</h2>
+                <p>Hello! I'm Jeampierre, a web developer passionate about technology and design. With experience in
+                    various technologies and a focus on creating innovative solutions, I'm always looking for new
+                    challenges. My goal is to combine creativity and functionality to deliver high-quality products and
+                    services.</p>
+                <a href="contact" class="btn" id="abrirModalFormularioBtn">Contact</a>
+            </div>
+            <div class="about-image">
+                <img src="upload/code.png" alt="Profile Picture">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+    <!-- Modal de formulario de contacto -->
+    <div id="modalFormulario" class="modal2">
+        <div class="modal-content2">
+            <span class="close-btn2" onclick="closeModalFormulario()">&times;</span>
+            <h3>Contact Me</h3>
+            <form action="https://formspree.io/f/xdknlygw" method="POST">
+                <label for="nombre">Name:</label><br>
+                <input type="text" id="nombre" name="name"><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="mensaje">Message:</label><br>
+                <textarea id="mensaje" name="message" required></textarea><br><br>
+
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+    <script>
+        // Función para abrir el modal del formulario
+        function openModalFormulario() {
+            document.getElementById("modalFormulario").style.display = "block";
+        }
+
+        // Función para cerrar el modal del formulario
+        function closeModalFormulario() {
+            document.getElementById("modalFormulario").style.display = "none";
+        }
+
+        // Event listener para abrir el modal al hacer clic en el botón de contacto
+        document.getElementById("abrirModalFormularioBtn").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevenir comportamiento por defecto del enlace
+            openModalFormulario();
+        });
+
+        // Cerrar el modal si se hace clic fuera del contenido del modal
+        window.onclick = function (event) {
+            const modalFormulario = document.getElementById("modalFormulario");
+            if (event.target == modalFormulario) {
+                closeModalFormulario();
+            }
+        };
+        // Event listener para abrir enlaces externos al hacer clic en una tarjeta de proyecto
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('click', function () {
+                const url = this.getAttribute('data-url');
+                window.open(url, '_blank');
+            })
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
