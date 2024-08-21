@@ -19,16 +19,20 @@
 
 <body>
     <header>
-        <i class="devicon-devicon-plain"></i>
-        <div class="logo">Developer</div>
-        <nav>
-            <ul>
-                <li><a href="#">home </a></li>
-                <li><a href="#projects">Projects </a></li>
-                <li><a href="#languages">Coding </a></li>
-                <li><a href="#about">About </a></li>
-                <li><a href="#about">Contact </a></li>
-                <li><button id="theme-toggle" class="btn"> Theme </button></li>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="nav-logo"><i class="devicon-devicon-plain"> Developer</i></div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">home </a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects </a></li>
+                <li class="nav-item"><a href="#languages" class="nav-link">Coding </a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About </a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">Contact </a></li>
+                <li class="nav-item"><button id="theme-toggle" class="btn nav-link"> Theme </button></li>
             </ul>
         </nav>
     </header>

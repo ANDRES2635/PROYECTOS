@@ -69,8 +69,7 @@ body {
 header {
     background-color: var(--header-bg);
     color: var(--header-text);
-    padding: 20px 40px;
-    display: flex;
+    padding: 0px 10px;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -81,32 +80,50 @@ header {
 header i {
     font-size: 26px;
 }
-header .logo {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    color: #fff;
+    position: relative;
+}
+.nav-logo {
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1px;
-    display: flex;
-    margin-right: auto;
 }
 
-header nav ul {
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute; /* Añadido para alinear el botón a la derecha */
+    right: 20px;
+    top: 3px;
+}
+.nav-menu {
     list-style: none;
     display: flex;
-    gap: 25px;
-    margin: 0;
     padding: 0;
+
 }
-header nav ul li {
+.nav-item {
     display: flex;
     align-items: center;
+    margin-left: 20px;
 }
 
-header nav ul li a, header nav ul li button {
+.nav-item a, .nav-item  button {
     color: var(--header-text);
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
 }
+
 /*
 header nav ul li a:hover, header nav ul li button:hover {
     color: var(--btn-bg);
@@ -595,12 +612,44 @@ footer .social-links a:hover {
 
 
 @media (max-width: 768px) {
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 28px;
+        right: -10px;
+        width: 200px;
+        border-radius: 5px;
+        background-color: var(--header-bg);;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
     header {
         align-items: flex-start;
-        padding: 15px 20px;
+        padding: 15px 10px;
     }
-    header nav ul {
-        gap: 15px;
+    .nav-menu.active {
+        display: flex;
+    }
+    .nav-item {
+        margin: 0;
+    }
+    .nav-item a {
+        padding: 10px 20px;
+        display: block;
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .nav-item a:hover {
+        background-color: #444;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+    .nav-menu {
+        align-items: center;
     }
     .hero h1 {
         font-size: 32px;
