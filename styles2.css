@@ -304,6 +304,99 @@ header nav ul li a:hover, header nav ul li button:hover {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
+ /*LENGUAJES DE PROGRAMACION*/
+ .languages {
+    padding: 50px 0;
+    background-color: var(--bg-color);
+}
+
+.languages .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.languages h2 {
+    font-size: 28px;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.languages-carousel {
+    position: relative;
+}
+
+.language-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    margin: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-item i {
+    font-size: 50px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.language-item p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.language-item small {
+    display: block;
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 10px;
+}
+
+.language-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Slick Carousel Styles */
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: #000102;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-dots {
+    bottom: -40px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #007bff;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #0056b3;
+}
+
+
+
 @keyframes pulse {
     0% {
         transform: scale(1.5);

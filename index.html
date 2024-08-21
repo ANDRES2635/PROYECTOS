@@ -7,6 +7,13 @@
     <title>projects</title>
     <link rel="stylesheet" href="styles2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <!-- Otros enlaces y estilos -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 </head>
 
@@ -16,8 +23,9 @@
         <div class="logo">Developer</div>
         <nav>
             <ul>
-                <li><a href="#home">home </a></li>
+                <li><a href="#">home </a></li>
                 <li><a href="#projects">Projects </a></li>
+                <li><a href="#languages">Coding </a></li>
                 <li><a href="#about">About </a></li>
                 <li><a href="#about">Contact </a></li>
                 <li><button id="theme-toggle" class="btn"> Theme </button></li>
@@ -40,23 +48,92 @@
                 <img src="upload/logo1.png" alt="Project 1">
                 <div class="card-content">
                     <h3>E-commerce SANTO BOCADO</h3>
-                    <p>I developed a custom e-commerce platform for a small cake business, featuring a shopping cart, payment gateway integration, and an admin panel to manage products and orders.</p>
+                    <p>I developed a custom e-commerce platform for a small cake business, featuring a shopping cart,
+                        payment gateway integration, and an admin panel to manage products and orders.</p>
                 </div>
             </div>
             <div class="project-card" data-url="https://andres2635.github.io/ExploreEcuador/">
                 <img src="upload/flag.png" alt="Project 2">
                 <div class="card-content">
                     <h3>EXPLORE ECUADOR</h3>
-                    <p>""Explore Ecuador" is a project that provides a detailed overview of Ecuador’s travel destinations, offering visual and descriptive information to captivate travelers and aid in trip planning. The site features modern web technologies, interactive design, and intuitive navigation, showcasing my skills in creating user-focused web solutions.</p>
+                    <p>""Explore Ecuador" is a project that provides a detailed overview of Ecuador’s travel
+                        destinations, offering visual and descriptive information to captivate travelers and aid in trip
+                        planning. The site features modern web technologies, interactive design, and intuitive
+                        navigation, showcasing my skills in creating user-focused web solutions.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!--NOTAS DE CAROUSEL-->
+    <section id="languages" class="languages">
+        <div class="container">
+            <h2>Programming Languages</h2>
+            <div class="languages-carousel">
+                <div class="language-item">
+                    <i class="devicon-react-original"></i>
+                    <p>React</p>
+                    <small>React is a JavaScript library for building user interfaces with reusable components.</small>
+                </div>
+                <div class="language-item">
+                    <i class="devicon-javascript-plain"></i>
+                    <p>JavaScript</p>
+                    <small>JavaScript is used for creating interactive and dynamic content on websites, supporting
+                        various programming styles.</small>
+                </div>
+                <div class="language-item">
+                    <i class="devicon-nodejs-plain"></i>
+                    <p>Node.js</p>
+                    <small>Node.js is a JavaScript runtime for building scalable network applications and real-time
+                        services.</small>
+                </div>
+                <div class="language-item">
+                    <i class="devicon-python-plain"></i>
+                    <p>Python</p>
+                    <small>Python is a high-level programming language known for its readability and
+                        versatility.</small>
+                </div>
+                <div class="language-item">
+                    <i class="devicon-php-plain"></i>
+                    <p>PHP</p>
+                    <small>PHP enables dynamic content creation and database interaction on the server-side.</small>
+                </div>
+                <div class="language-item">
+                    <i class="devicon-css3-plain"></i>
+                    <p>CSS3</p>
+                    <small>CSS3 includes new features like animations and responsive design capabilities for styling web
+                        pages.</small>
+                </div>
+                <div class="language-item">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <p>Bootstrap</p>
+                    <small>A popular front-end framework for developing responsive, mobile-first websites</small>
+                </div>
+                <div class="language-item">
+                    <i class="devicon-html5-plain"></i>
+                    <p>HTML5</p>
+                    <small>HTML5 is the latest version of Hypertext Markup Language, providing new features and
+                        improvements for structuring content.</small>
+                </div>
+                <div class="language-item">
+                    <i class="devicon-mysql-plain"></i>
+                    <p>MySQL</p>
+                    <small>MySQL is a relational database management system used for storing and managing data.</small>
+                </div>
+                <div class="language-item">
+                    <i class="devicon-mongodb-plain"></i>
+                    <p>MongoDB</p>
+                    <small>MongoDB is a NoSQL database designed for handling large volumes of unstructured data.</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section id="about" class="about">
         <div class="about-container">
             <div class="about-text">
-                <h2>About</h2>
+                <h2>About me</h2>
                 <p>Hello! I'm Jeampierre, a web developer passionate about technology and design. With experience in
                     various technologies and a focus on creating innovative solutions, I'm always looking for new
                     challenges. My goal is to combine creativity and functionality to deliver high-quality products and
@@ -136,7 +213,10 @@
             })
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>

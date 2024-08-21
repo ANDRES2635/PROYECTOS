@@ -36,6 +36,33 @@ function openModal(project) {
 function closeModal() {
     modal.style.display = 'none';
 }
+ //CAROUSEL LENGUAJE PROGRAMMING
+ $(document).ready(function(){
+    $('.languages-carousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+});
+
 
 
 // Cerrar modal al hacer clic fuera del contenido
